@@ -1,0 +1,31 @@
+<!-- view-bills.component.html -->
+<div *ngIf="bills && bills.length > 0; else noBills">
+  <h2>Bills for {{ patientEmail }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Medicine(s)</th>
+        <th>Total Bill</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bill of bills">
+        <td>
+          <ul>
+            <li *ngFor="let medicine of bill.medicines">{{ medicine.medicineName }} ({{ medicine.quantity }})</li>
+          </ul>
+        </td>
+        <td>{{ bill.totalBill }}</td>
+        <td>{{ bill.status }}</td>
+        <td>
+          <button *ngIf="bill.status === 'unpaid'" (click)="makePayment(bill.billId)">Make Payment</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #noBills>
+  <p>No bills found for {{ patientEmail }}</p>
+</ng-template>

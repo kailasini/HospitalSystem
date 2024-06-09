@@ -1,0 +1,36 @@
+
+  <div class="login-form">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="loginForm">
+    <div class="form-group">
+      <label for="loginAs">Login As</label>
+      <select formControlName="loginAs" id="loginAs" required>
+        <option value="" disabled selected>Select login type</option>
+        <option value="patient">Patient</option>
+        <option value="admin">Admin</option>
+        <option value="doctor">Doctor</option>
+      </select>
+      <div *ngIf="loginForm.get('loginAs')?.invalid && (loginForm.get('loginAs')?.dirty || loginForm.get('loginAs')?.touched)" class="error-message">
+        Login type is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" placeholder="Enter email" required>
+      <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="error-message">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" id="password" placeholder="Enter password" required>
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="error-message">
+        Password is required.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  </form>
+</div>

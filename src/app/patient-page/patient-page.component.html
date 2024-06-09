@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-panel">
+            <div class="user-info">
+                <img class="user" src="https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png" alt="User Icon">
+                <p class="para">You're logged in as {{patientEmail}} </p>
+            </div>
+            <ul>
+                <li><p><button routerLink="/make-appointment"><img src="https://cdn-icons-png.flaticon.com/512/4624/4624216.png">Make Appointment</button></p></li>
+                <li><p><button (click)="viewMedicines()"><img src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png">View Medicines</button> </p></li>
+                <li><p><button routerLink="/view-bills"><img src="https://png.pngtree.com/element_our/png/20181226/invoice-vector-icon-png_277443.jpg">View bills</button></p></li>
+                <li><p><button routerLink="/view-doctor"><img src="https://img.freepik.com/premium-vector/doctor-icon-avatar-white_136162-58.jpg">View Doctors</button></p></li>
+                <li><p><button routerLink="/login"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9p82dJuVtEs6W_miTWLzQPqxMwwwC988DbcY-y7ay6w&s">Logout</button></p></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Welcome to your Patient Portal!</h1>
+            <p>Here you can manage your appointments, view medications,view the doctors present in the system and access medical records.</p>
+            <div style="display: flex; justify-content: center;">
+                <table *ngIf="showTable" class="medicine-table" border="3" style="background-color: #f2f2f2;" border-collapse: collapse>
+                <thead>
+                  <tr style="font-size: 16px;">
+                    <th style="padding: 8px;">Doctor Email</th>
+                    <th style="padding: 8px;">Medicine</th>
+                    <th style="padding: 8px;">Quantity</th>
+                    <th style="padding: 8px;">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let medicine of prescribedMedicines" style="font-size: 16px;">
+                    <td style="padding: 8px;">{{ medicine.doctorEmail }}</td>
+                    <td style="padding: 8px;">
+                      <ul>
+                        <li *ngFor="let item of medicine.medicines">{{ item.medicineName }}</li>
+                      </ul>
+                    </td>
+                    <td style="padding: 8px;">
+                      <ul>
+                        <li *ngFor="let item of medicine.medicines">{{ item.quantity }}</li>
+                      </ul>
+                    </td>
+                    <td style="padding: 8px;">{{ medicine.description }}</td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

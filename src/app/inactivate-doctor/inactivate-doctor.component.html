@@ -1,0 +1,11 @@
+<!-- src/app/inactivate-doctor/inactivate-doctor.component.html -->
+<body><div class="inactivate-doctor">
+  <h1>Inactivate Doctor Account</h1>
+  <div>
+    <label for="doctorEmail">Doctor Email:</label>
+    <input type="text" id="doctorEmail" [(ngModel)]="email" name="doctorEmail" placeholder="Enter Doctor Email">
+  </div>
+  <button (click)="inactivateDoctor()">Inactivate Account</button>
+  <div *ngIf="message">{{ message }}</div>
+</div></body>
+

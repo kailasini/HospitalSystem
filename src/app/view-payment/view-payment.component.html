@@ -1,0 +1,21 @@
+<!-- src/app/view-payment/view-payment.component.html -->
+<div class="view-payment">
+  <h1>View Payments</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Patient Email</th>
+        <th>Total Bill</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payments">
+        <td>{{ payment.patientEmail }}</td>
+        <td>{{ payment.totalBill }}</td>
+        <td>{{ payment.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

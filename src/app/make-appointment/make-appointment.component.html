@@ -1,0 +1,23 @@
+<div class="content">
+  <h2 style="text-align: center;">Make Appointment</h2>
+  <form (ngSubmit)="submitAppointment()">
+    <label for="doctorEmail">Doctor Email:</label>
+    <input type="email" id="doctorEmail" name="doctorEmail" [(ngModel)]="appointment.doctorEmail" placeholder="Doctor Email" required>
+    <div *ngIf="submitted && !appointment.doctorEmail" class="text-danger">Doctor Email is required</div>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" [(ngModel)]="appointment.date" [min]="currentDate" required>
+    <div *ngIf="submitted && !appointment.date" class="text-danger">Date is required</div>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" [(ngModel)]="appointment.time" required>
+    <div *ngIf="submitted && !appointment.time" class="text-danger">Time is required</div>
+
+    <label for="reason">Reason for Appointment:</label>
+    <textarea id="reason" name="reason" [(ngModel)]="appointment.reason" placeholder="Write something.." style="height:100px" required></textarea>
+    <div *ngIf="submitted && !appointment.reason" class="text-danger">Reason for Appointment is required</div>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+

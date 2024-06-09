@@ -1,0 +1,33 @@
+/* src/app/view-patients/view-patients.component.css */
+.view-patients {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.view-patients h1 {
+  text-align: center;
+}
+
+.view-patients table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.view-patients th, .view-patients td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.view-patients th {
+  background-color: #f2f2f2;
+}
+
+.view-patients tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.view-patients tr:hover {
+  background-color: #ddd;
+}

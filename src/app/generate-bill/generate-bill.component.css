@@ -1,0 +1,52 @@
+/* src/app/bill-generate/bill-generate.component.css */
+.generate-bill {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.generate-bill h1 {
+  text-align: center;
+}
+
+.generate-bill div {
+  margin-bottom: 10px;
+}
+
+.generate-bill label {
+  font-weight: bold;
+}
+
+.generate-bill input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.generate-bill button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.generate-bill button:hover {
+  background-color: #45a049;
+}
+
+.generate-bill h2 {
+  text-align: center;
+  color: #333;
+}
+

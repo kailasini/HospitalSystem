@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-panel">
+            <div class="user-info">
+                <img class="user" src="https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png" alt="User Icon">
+                <p class="para">You're logged in as {{doctorEmail}} </p>
+            </div>
+            <ul>
+                <li><p><button (click)="viewAppointments()"><img src="https://cdn-icons-png.flaticon.com/512/4624/4624216.png">View Appointments</button></p></li>
+                <li><p><button routerLink="/view-patients"><img src="https://www.shutterstock.com/shutterstock/photos/1286043292/display_1500/stock-vector-patient-icon-customer-icon-with-add-additional-sign-patient-icon-and-new-plus-positive-symbol-1286043292.jpg">View Patients</button></p></li>
+                <li><p><button routerLink="/prescribe-medicine"><img src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png">Prescribe Medicines</button> </p></li>
+                <li><p><button routerLink="/login"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9p82dJuVtEs6W_miTWLzQPqxMwwwC988DbcY-y7ay6w&s">Logout</button></p></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Welcome to your Doctor Portal!</h1>
+            <p>Here you can view your appointments, prescribe medications to your patient</p>
+            <div style="display: flex; justify-content: center;"><table *ngIf="showAppointments" border="3" style="background-color: #f2f2f2;" border-collapse: collapse>
+              <tr style="font-size: 16px;">
+                  <th style="padding: 8px;">Patient Email</th>
+                  <th style="padding: 8px;">Date</th>
+                  <th style="padding: 8px;">Time</th>
+                  <th style="padding: 8px;">Reason</th>
+              </tr>
+              <tr *ngFor="let appointment of appointments" style="font-size: 16px;">
+                  <td style="padding: 8px;">{{ appointment.patientEmail }}</td>
+                  <td style="padding: 8px;">{{ appointment.date }}</td>
+                  <td style="padding: 8px;">{{ appointment.time }}</td>
+                  <td style="padding: 8px;">{{ appointment.reason }}</td>
+              </tr>
+          </table>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+

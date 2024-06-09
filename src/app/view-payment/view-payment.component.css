@@ -1,0 +1,33 @@
+/* src/app/view-payment/view-payment.component.css */
+.view-payment {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.view-payment h1 {
+  text-align: center;
+}
+
+.view-payment table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.view-payment th, .view-payment td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.view-payment th {
+  background-color: #f2f2f2;
+}
+
+.view-payment tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.view-payment tr:hover {
+  background-color: #ddd;
+}

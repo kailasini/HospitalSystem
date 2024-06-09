@@ -1,0 +1,28 @@
+
+<div style="text-align:center" class="med">
+  <h1>Prescribe Medicine</h1>
+  <form (ngSubmit)="submitPrescription()">
+    <div *ngFor="let item of prescriptionItems; let i = index" class="medicine-item">
+      <label for="medicine{{i}}">Medicine {{i + 1}}:</label>
+      <input type="text" id="medicine{{i}}" name="medicine{{i}}" [(ngModel)]="prescriptionItems[i].medicineName" placeholder="Medicine" required>
+      <div *ngIf="submitted && !prescriptionItems[i].medicine" class="text-danger">Medicine is required</div>
+
+      <label for="quantity{{i}}">Quantity:</label>
+      <input type="number" id="quantity{{i}}" name="quantity{{i}}" [(ngModel)]="prescriptionItems[i].quantity" placeholder="Quantity" min="1" required>
+      <div *ngIf="submitted && !prescriptionItems[i].quantity" class="text-danger">Quantity is required</div>
+      
+      <hr *ngIf="i !== prescriptionItems.length - 1">
+    </div>
+    
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" [(ngModel)]="description" placeholder="Description" style="height:100px" required></textarea>
+    <div *ngIf="submitted && !description" class="text-danger">Description is required</div>
+
+    <label for="patientEmail">Patient Email:</label>
+    <input type="email" id="patientEmail" name="patientEmail" [(ngModel)]="patientEmail" placeholder="Patient Email" required>
+    <div *ngIf="submitted && !patientEmail" class="text-danger">Patient Email is required</div>
+
+    <input type="submit" value="Prescribe">
+    <button type="button" (click)="addMedicine()">Add Medicine</button>
+  </form>
+</div>

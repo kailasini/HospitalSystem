@@ -1,0 +1,22 @@
+<!-- src/app/view-patients/view-patients.component.html -->
+<div class="view-patients">
+  <h1>View Patients</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.email }}</td>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
