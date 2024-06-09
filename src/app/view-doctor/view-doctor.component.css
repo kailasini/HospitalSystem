@@ -1,0 +1,33 @@
+/* src/app/view-doctor/view-doctor.component.css */
+.view-doctor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.view-doctor h1 {
+  text-align: center;
+}
+
+.view-doctor table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.view-doctor th, .view-doctor td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.view-doctor th {
+  background-color: #f2f2f2;
+}
+
+.view-doctor tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.view-doctor tr:hover {
+  background-color: #ddd;
+}

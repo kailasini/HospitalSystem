@@ -1,0 +1,85 @@
+body {
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  height: 100vh; /* Set body height to 100vh */
+  display: flex; /* Make body a flex container */
+}
+
+.wrapper {
+  width: 100vw; /* Set wrapper width to 100vw */
+  height: 100vh; /* Inherit height from body */
+  display: flex; /* Make wrapper a flex container */
+}
+
+.side-panel {
+  width: 250px;
+  background-color: #074173;
+  padding: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.para {
+  font-weight: bold;
+}
+
+.side-panel ul {
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center; /* Horizontally center content */
+}
+
+.side-panel li {
+  margin-bottom: 30px;
+  padding-left: 10px;
+  text-align: center;
+  justify-content: center; /* Horizontally center content */
+  align-items: center;
+}
+
+.side-panel button {
+  background-color: #1679AB; /* Green color */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.side-panel a {
+  text-decoration: none;
+  color: black;
+}
+
+.main-content {
+  flex: 1; /* Main content takes remaining space */
+  padding: 20px;
+  text-align: center;
+  background-image: url("back1.jpg");
+  background-position: center;
+  background-size: cover;
+}

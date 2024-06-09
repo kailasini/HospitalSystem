@@ -1,0 +1,49 @@
+/* src/app/inactivate-doctor/inactivate-doctor.component.css */
+body{
+  background-image: url("view-doctor.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inactivate-doctor {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.inactivate-doctor h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inactivate-doctor div {
+  margin-bottom: 10px;
+}
+
+.inactivate-doctor label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.inactivate-doctor input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inactivate-doctor button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inactivate-doctor button:hover {
+  background-color: #45a049;
+}
+
+.inactivate-doctor div.message {
+  margin-top: 10px;
+  color: #ff0000;
+}

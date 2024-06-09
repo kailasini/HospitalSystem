@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-panel">
+            <div class="user-info">
+                <img class="user" src="https://static-00.iconduck.com/assets.00/user-icon-2048x2048-ihoxz4vq.png" alt="User Icon">
+                <p class="para">You're logged in as {{adminEmail}} </p>
+            </div>
+            <ul>
+                <li><p><button routerLink="/addpatient"><img src="https://www.shutterstock.com/shutterstock/photos/1286043292/display_1500/stock-vector-patient-icon-customer-icon-with-add-additional-sign-patient-icon-and-new-plus-positive-symbol-1286043292.jpg">Add patient</button></p></li>
+                <li><p><button routerLink="/adddoctor"><img src="https://img.freepik.com/premium-vector/doctor-icon-avatar-white_136162-58.jpg">Add doctor</button> </p></li>
+                <li><p><button routerLink="/bill-generate"><img src="https://png.pngtree.com/element_our/png/20181226/invoice-vector-icon-png_277443.jpg">Generate bill</button></p></li>
+                <li><p><button routerLink="/view-payment"><img src="https://cdn1.vectorstock.com/i/1000x1000/96/85/hand-pay-icon-vector-21559685.jpg">View Payment</button></p></li>
+                <li><p><button routerLink="/inactivate-doctor"><img src="https://img.freepik.com/premium-vector/doctor-icon-avatar-white_136162-58.jpg">Inactivate doctor</button> </p></li>
+                <li><p><button routerLink="/login"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9p82dJuVtEs6W_miTWLzQPqxMwwwC988DbcY-y7ay6w&s">Logout</button></p></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Welcome to your Admin Portal!</h1>
+            <p>Here you can add patient, add doctors and generate bill for the patient</p>
+        </div>
+    </div>
+</body>
+</html>
+

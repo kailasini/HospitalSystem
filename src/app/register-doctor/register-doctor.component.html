@@ -1,0 +1,66 @@
+
+  <div class="registration-form">
+  <h2>Add Doctor</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" *ngIf="registerForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" formControlName="name" id="name" placeholder="Enter name" required>
+      <div *ngIf="registerForm.get('name')?.invalid && (registerForm.get('name')?.dirty || registerForm.get('name')?.touched)" class="error-message">
+        Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" id="email" placeholder="Enter email" required>
+      <div *ngIf="registerForm.get('email')?.invalid && (registerForm.get('email')?.dirty || registerForm.get('email')?.touched)" class="error-message">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" formControlName="phone" id="phone" placeholder="Enter phone number" required>
+      <div *ngIf="registerForm.get('phone')?.invalid && (registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched)" class="error-message">
+        Please enter a valid phone number.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea formControlName="address" id="address" placeholder="Enter address" required></textarea>
+      <div *ngIf="registerForm.get('address')?.invalid && (registerForm.get('address')?.dirty || registerForm.get('address')?.touched)" class="error-message">
+        Address is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="specialization">Specialization</label>
+      <input type="text" formControlName="specialization" id="specialization" placeholder="Enter specialization" required>
+      <div *ngIf="registerForm.get('specialization')?.invalid && (registerForm.get('specialization')?.dirty || registerForm.get('specialization')?.touched)" class="error-message">
+        Specialization is required.
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" id="password" placeholder="Enter password" required>
+      <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)" class="error-message">
+        Password is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" formControlName="confirmPassword" id="confirmPassword" placeholder="Confirm password" required>
+      <div *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)" class="error-message">
+        Confirm Password is required.
+      </div>
+      <div *ngIf="registerForm.get('password')?.value !== registerForm.get('confirmPassword')?.value && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)" class="error-message">
+        Passwords do not match.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="registerForm.invalid">Add Doctor</button>
+  </form>
+</div>

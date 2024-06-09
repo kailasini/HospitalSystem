@@ -1,0 +1,57 @@
+.content{
+  background-image: url("background.jpg");
+  background-size: cover;
+  padding: 0%;
+  margin: 0%;
+}
+.text-danger {
+  color: red;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="email"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* On screens that are 600px wide or less, make the inputs full width */
+@media screen and (max-width: 600px) {
+  input[type="email"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 100%;
+  }
+}

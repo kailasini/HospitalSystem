@@ -1,0 +1,15 @@
+<!-- src/app/generate-bill/generate-bill.component.html -->
+<div class="generate-bill">
+  <h1>Generate Bill</h1>
+  <div>
+      <label for="patientEmail">Patient Email:</label>
+      <input type="text" id="patientEmail" [(ngModel)]="patientEmail" placeholder="Enter patient email">
+      <button (click)="generateBill()">Generate Bill</button>
+  </div>
+  <div *ngIf="bill > 0">
+      <h2>Bill: {{ bill }}</h2>
+  </div>
+  <div *ngIf="bill == 0 && patientEmail !== ''">
+      <h2>No bill generated for the selected patient.</h2>
+  </div>
+</div>
